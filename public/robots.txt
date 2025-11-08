@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://truyen247.site/
+
+# Sitemaps
+Sitemap: https://truyen247.site/sitemap.xml

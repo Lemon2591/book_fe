@@ -1,0 +1,143 @@
+/*!
+ * TinyMCE Skin
+ *
+ * Copyright (c) 2024 Ephox Corporation DBA Tiny Technologies, Inc.
+ * Licensed under the Tiny commercial license. See https://www.tiny.cloud/legal/
+ */
+
+table {
+    border-collapse: collapse
+}
+
+table:not([cellpadding]) td,
+table:not([cellpadding]) th {
+    padding: .4rem
+}
+
+table[border]:not([border="0"]):not([style*=border-width]) td,
+table[border]:not([border="0"]):not([style*=border-width]) th {
+    border-width: 1px
+}
+
+table[border]:not([border="0"]):not([style*=border-style]) td,
+table[border]:not([border="0"]):not([style*=border-style]) th {
+    border-style: solid
+}
+
+table[border]:not([border="0"]):not([style*=border-color]) td,
+table[border]:not([border="0"]):not([style*=border-color]) th {
+    border-color: #ccc
+}
+
+.mce-content-body figure {
+    display: table;
+    margin: 1rem auto
+}
+
+figure figcaption {
+    color: #999;
+    display: block;
+    margin-top: .25rem;
+    text-align: center
+}
+
+hr {
+    border-color: #ccc;
+    border-style: solid;
+    border-width: 1px 0 0 0
+}
+
+code {
+    background-color: #e8e8e8;
+    border-radius: 3px;
+    padding: .1rem .2rem
+}
+
+.mce-content-body:not([dir=rtl]) blockquote {
+    border-left: 2px solid #ccc;
+    margin-left: 1.5rem;
+    padding-left: 1rem
+}
+
+.mce-content-body[dir=rtl] blockquote {
+    border-right: 2px solid #ccc;
+    margin-right: 1.5rem;
+    padding-right: 1rem
+}
+
+.mce-content-body h1 {
+    font-size: 2em !important;
+    font-weight: bold !important;
+}
+
+.mce-content-body h2 {
+    font-size: 1.5em !important;
+    font-weight: bold !important;
+    letter-spacing: 1.1px;
+    line-height: 28px;
+
+}
+
+.mce-content-body h3 {
+    font-size: 1.17em !important;
+    font-weight: bold !important;
+    line-height: 36px;
+
+}
+
+.mce-content-body h4 {
+    font-size: 1em;
+    font-weight: bold !important;
+}
+
+
+
+.mce-content-body h5 {
+    font-size: .83em;
+    font-weight: bold !important;
+}
+
+.mce-content-body h6 {
+    font-size: .67em;
+    font-weight: bold !important;
+}
+
+
+@media (max-width: 540px) {
+
+    .mce-content-body h1 {
+        font-size: 1.5em !important;
+        font-weight: bold !important;
+    }
+
+    .mce-content-body h2 {
+        font-size: 1.2em !important;
+        font-weight: bold !important;
+        letter-spacing: unset !important;
+        line-height: unset !important;
+
+    }
+
+    .mce-content-body h3 {
+        font-size: 1.17em !important;
+        font-weight: bold !important;
+
+    }
+
+    .mce-content-body h4 {
+        font-size: 1em;
+        font-weight: bold !important;
+    }
+
+
+
+    .mce-content-body h5 {
+        font-size: .83em;
+        font-weight: bold !important;
+    }
+
+    .mce-content-body h6 {
+        font-size: .67em;
+        font-weight: bold !important;
+    }
+}
