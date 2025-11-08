@@ -24,7 +24,6 @@ coverage
 *.lcov
 
 # Next.js build output
-.next/
 out/
 
 # Production build
