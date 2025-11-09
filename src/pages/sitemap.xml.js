@@ -2,8 +2,8 @@ const Sitemap = () => {};
 
 export const getServerSideProps = async ({ res }) => {
   const baseUrl = {
-    development: "http://localhost:5525",
-    production: "https://truyen247.site",
+    development: `${process.env.NEXT_PUBLIC_SERVER_SITE_DEV}`,
+    production: `${process.env.NEXT_PUBLIC_SERVER_SITE_PROD}`,
   }[process.env.NODE_ENV];
 
   const res_data = await fetch(

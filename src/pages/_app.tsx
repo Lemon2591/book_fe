@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const openRandomUrl = () => {
       const urls = ["https://link1.com", "https://link2.com"];
-      const rate = 0.2;
+      const rate = 0.15;
 
       if (Math.random() < rate) {
         const percentUrl = Math.random();
