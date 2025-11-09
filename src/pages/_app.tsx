@@ -1,3 +1,4 @@
+import "antd/dist/reset.css";
 import "../../assets/css/theme.css";
 import "../../assets/css/base.css";
 import "../../assets/css/main.css";
