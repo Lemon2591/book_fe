@@ -13,11 +13,15 @@ import Layout from "../components/Layout";
 import "lazysizes";
 import type { AppProps } from "next/app";
 import { useEffect } from "react";
+import Script from "next/script";
 
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const openRandomUrl = () => {
-      const urls = ["https://link1.com", "https://link2.com"];
+      const urls = [
+        "https://s.shopee.vn/1BEMtIZKvw",
+        "https://s.shopee.vn/1BEMtIZKvw",
+      ];
       const rate = 0.15;
 
       if (Math.random() < rate) {
@@ -40,6 +44,15 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
       <Layout>
+        <Script id="gtm-script" strategy="afterInteractive">
+          {`
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id=GTM-TNMMNWJS'+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-TNMMNWJS');
+        `}
+        </Script>
         <Component {...pageProps} />
       </Layout>
     </>

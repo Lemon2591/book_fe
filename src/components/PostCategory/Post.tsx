@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 import { Breadcrumb, Space, Table, Button } from "antd";
 import type { TableProps } from "antd";
 import "moment/locale/vi";
+import { stringToSlug } from "@/util/helper";
 moment.locale("vi");
 
 const OutIcon = AiOutlineHome as unknown as React.FC<any>;
@@ -172,7 +173,17 @@ const Post = ({ data }: any) => {
                     <h2>Thể loại:</h2>
                     <div>
                       {data?.genres?.map((val: any, idx: number) => {
-                        return <span key={idx}>{val?.name}</span>;
+                        return (
+                          <span
+                            key={idx}
+                            onClick={() =>
+                              router.push(`/${stringToSlug(val?.name)}`)
+                            }
+                            style={{ cursor: "pointer" }}
+                          >
+                            {val?.name}
+                          </span>
+                        );
                       })}
                     </div>
                   </div>
