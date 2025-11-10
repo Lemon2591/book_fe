@@ -21,7 +21,10 @@ const Layout: FC<any> = ({ children }) => {
         <title>
           Đọc Truyện Online Hay Nhất – Ngôn Tình, Cổ Đại, Hiện Đại, Ngược
         </title>
-        <meta name="robots" content="noindex, nofollow" />
+        <meta
+          name="google-site-verification"
+          content="uvytJCs6KvlOtjAkGZxLOV-y52f7mW0sQkCqTdXV1mE"
+        />
       </Head>
 
       <div>

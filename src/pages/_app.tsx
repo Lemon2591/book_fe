@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
     const openRandomUrl = () => {
       const urls = [
-        "https://s.shopee.vn/1BEMtIZKvw",
+        "https://s.lazada.vn/s.6gsi5",
         "https://s.shopee.vn/1BEMtIZKvw",
       ];
       const rate = 0.15;
@@ -34,7 +34,6 @@ function MyApp({ Component, pageProps }: AppProps) {
 
     const handleGlobalClick = (event: any) => {
       if (event.target.closest(".no-random-open")) return;
-
       openRandomUrl();
     };
 
