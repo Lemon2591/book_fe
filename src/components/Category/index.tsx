@@ -15,12 +15,14 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 moment.locale("vi");
+import Image from "next/image";
 
 const SearchIcon = AiOutlineSearch as unknown as React.FC<any>;
 const StarIcon = AiFillStar as unknown as React.FC<any>;
 const OutIcon = AiOutlineSignature as unknown as React.FC<any>;
 
 function Categories({ data }: any) {
+  console.log(data);
   const router = useRouter();
   const [valueSearch, setValueSearch] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -65,7 +67,8 @@ function Categories({ data }: any) {
     }
   };
 
-  const navigateURL = (url: string) => {
+  const navigateURL = (e: any, url: string) => {
+    e.preventDefault();
     router.push(`/page/${url}`);
   };
 
@@ -79,7 +82,7 @@ function Categories({ data }: any) {
               <div className="py-[50px] suggest-content suggest-category-ct">
                 <div className="flex suggest-search pt-[40px] suggest-category">
                   <div className="w-[70%] suggest-left">
-                    <h1>Truyện theo thể loại: Ngôn tình</h1>
+                    <h1>Truyện theo thể loại: {data?.categoryId?.name}</h1>
                   </div>
                   <div className="w-[30%] suggest-right">
                     <div>
@@ -126,13 +129,19 @@ function Categories({ data }: any) {
                           : "";
                         const url = `${process.env.NEXT_PUBLIC_API_SERVER_NEWS}/img/stories/${urlEnd}`;
                         return (
-                          <div
+                          <a
                             className="suggest-container-item flex"
                             key={idx}
-                            onClick={() => navigateURL(val?.slug)}
+                            onClick={(e) => navigateURL(e, val?.slug)}
+                            href={`/page/${val?.slug}`}
                           >
-                            <div className="suggest-container-img">
-                              <img src={url} alt={val?.slug} />
+                            <div className="suggest-container-img relative">
+                              <Image
+                                src={url}
+                                alt={val?.slug}
+                                fill
+                                className="object-cover"
+                              />
                             </div>
                             <div className="suggest-container-detail ml-[10px]">
                               <div className="suggest-container-detail-hd flex items-center">
@@ -163,7 +172,7 @@ function Categories({ data }: any) {
                                 </p>
                               </div>
                             </div>
-                          </div>
+                          </a>
                         );
                       })}
                   </div>

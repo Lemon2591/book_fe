@@ -22,7 +22,7 @@ module.exports = withBundleAnalyzer({
     isDev, // Pass through env variables
   },
   images: {
-    domains: ["api.culturalvn.com", "culturalvn.com"],
+    domains: ["api.truyen247.site", "truyen247.site"],
     formats: ["image/avif", "image/webp"],
   },
 });

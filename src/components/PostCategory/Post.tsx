@@ -8,6 +8,7 @@ import type { TableProps } from "antd";
 import "moment/locale/vi";
 import { stringToSlug } from "@/util/helper";
 moment.locale("vi");
+import Image from "next/image";
 
 const OutIcon = AiOutlineHome as unknown as React.FC<any>;
 
@@ -148,8 +149,13 @@ const Post = ({ data }: any) => {
           <div className="page-content">
             <div className="page-content-container">
               <div className="page-content-des flex">
-                <div className="page-content-des-img">
-                  <img src={convertUrl(data?.cover_url)} alt={data?.slug} />
+                <div className="page-content-des-img relative">
+                  <Image
+                    src={convertUrl(data?.cover_url)}
+                    alt={data?.slug}
+                    fill
+                    className="object-cover"
+                  />
                 </div>
                 <div className="page-content-des-text">
                   <h1>{data?.title || ""}</h1>

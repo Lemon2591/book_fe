@@ -154,7 +154,7 @@ const Chapter: FC<any> = ({ data, isLock }) => {
                 </button>
               </div>
               <div className="unlock-img">
-                <img src="/assets/img/static/aff.webp" alt="" />
+                <img src="/assets/img/static/aff.webp" alt="imgage" />
               </div>
             </div>
             <div className="container-docs-aff"></div>

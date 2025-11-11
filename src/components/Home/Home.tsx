@@ -23,6 +23,7 @@ import {
   Autoplay,
 } from "swiper/modules";
 moment.locale("vi");
+import Image from "next/image";
 
 const OutIcon = AiOutlineSignature as unknown as React.FC<any>;
 const SearchIcon = AiOutlineSearch as unknown as React.FC<any>;
@@ -70,7 +71,8 @@ function Home({ data, dataPage }: any) {
     }
   };
 
-  const navigateURL = (url: string) => {
+  const navigateURL = (e: any, url: string) => {
+    e.preventDefault();
     router.push(`/page/${url}`);
   };
 
@@ -137,10 +139,15 @@ function Home({ data, dataPage }: any) {
                       return (
                         <SwiperSlide
                           key={key}
-                          onClick={() => navigateURL(val?.slug)}
+                          onClick={(e) => navigateURL(e, val?.slug)}
                         >
-                          <div className="slide-item">
-                            <img src={url} alt={val?.slug} />
+                          <div className="slide-item relative">
+                            <Image
+                              src={url}
+                              alt={val?.slug}
+                              fill
+                              className="object-cover"
+                            />
                             <div>
                               <h2>{val?.title}</h2>
                             </div>
@@ -206,13 +213,19 @@ function Home({ data, dataPage }: any) {
                           : "";
                         const url = `${process.env.NEXT_PUBLIC_API_SERVER_NEWS}/img/stories/${urlEnd}`;
                         return (
-                          <div
+                          <a
                             className="suggest-container-item flex"
                             key={idx}
-                            onClick={() => navigateURL(val?.slug)}
+                            onClick={(e) => navigateURL(e, val?.slug)}
+                            href={`/page/${val?.slug}`}
                           >
-                            <div className="suggest-container-img">
-                              <img src={url} alt={val?.slug} />
+                            <div className="suggest-container-img relative">
+                              <Image
+                                src={url}
+                                alt={val?.slug}
+                                fill
+                                className="object-cover"
+                              />
                             </div>
                             <div className="suggest-container-detail ml-[10px]">
                               <div className="suggest-container-detail-hd flex items-center">
@@ -243,7 +256,7 @@ function Home({ data, dataPage }: any) {
                                 </p>
                               </div>
                             </div>
-                          </div>
+                          </a>
                         );
                       })}
                   </div>
@@ -281,13 +294,19 @@ function Home({ data, dataPage }: any) {
                               : "";
                             const url = `${process.env.NEXT_PUBLIC_API_SERVER_NEWS}/img/stories/${urlEnd}`;
                             return (
-                              <div
+                              <a
                                 className="trending-container-item flex"
                                 key={ix}
-                                onClick={() => navigateURL(val?.slug)}
+                                onClick={(e) => navigateURL(e, val?.slug)}
+                                href={`/page/${val?.slug}`}
                               >
-                                <div className="suggest-container-img">
-                                  <img src={url} alt={val?.slug} />
+                                <div className="suggest-container-img relative">
+                                  <Image
+                                    src={url}
+                                    alt={val?.slug}
+                                    fill
+                                    className="object-cover"
+                                  />
                                 </div>
                                 <div className="suggest-container-detail ml-[10px]">
                                   <div className="suggest-container-detail-hd flex items-center">
@@ -321,7 +340,7 @@ function Home({ data, dataPage }: any) {
                                     </p>
                                   </div>
                                 </div>
-                              </div>
+                              </a>
                             );
                           })}
                       </div>
@@ -344,7 +363,12 @@ function Home({ data, dataPage }: any) {
                                 <i className="mr-[5px]">
                                   <RightIcon />
                                 </i>
-                                <a>{val?.name}</a>
+                                <a
+                                  href={val?.slug}
+                                  onClick={(e) => e.preventDefault()}
+                                >
+                                  {val?.name}
+                                </a>
                               </li>
                             );
                           })}

@@ -10,6 +10,7 @@ import { Pagination as PaginationAntd } from "antd";
 import moment from "moment";
 import "moment/locale/vi";
 moment.locale("vi");
+import Image from "next/image";
 
 const SearchIcon = AiOutlineSearch as unknown as React.FC<any>;
 const StarIcon = AiFillStar as unknown as React.FC<any>;
@@ -100,8 +101,13 @@ const Search: FC<any> = ({ data }) => {
                     key={val?.id}
                     onClick={() => navigateURL(val?.slug)}
                   >
-                    <div className="suggest-container-img">
-                      <img src={convertUrl(val?.cover_url)} alt={val?.slug} />
+                    <div className="suggest-container-img relative">
+                      <Image
+                        src={convertUrl(val?.cover_url)}
+                        alt={val?.slug}
+                        fill
+                        className="object-cover"
+                      />
                     </div>
                     <div className="suggest-container-detail ml-[10px]">
                       <div className="suggest-container-detail-hd flex items-center">
