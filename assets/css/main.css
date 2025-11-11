@@ -2319,10 +2319,10 @@ address {
         width: 100%;
         display: flex;
         justify-content: center;
+        height: 300px;
     }
 
     .page-content-des-img>img {
-        max-width: 200px;
         border-radius: 5px;
     }
 
