@@ -147,6 +147,7 @@ function Home({ data, dataPage }: any) {
                               alt={val?.slug}
                               fill
                               className="object-cover"
+                              unoptimized
                             />
                             <div>
                               <h2>{val?.title}</h2>
@@ -165,7 +166,7 @@ function Home({ data, dataPage }: any) {
               <div className="py-[50px] suggest-content">
                 <div className="flex suggest-search">
                   <div className="w-[70%] suggest-left">
-                    <h1>Đề xuất truyện hay</h1>
+                    <h1>Đề xuất truyện mới nhất</h1>
                   </div>
                   <div className="w-[30%] suggest-right">
                     <div>
@@ -225,6 +226,7 @@ function Home({ data, dataPage }: any) {
                                 alt={val?.slug}
                                 fill
                                 className="object-cover"
+                                unoptimized
                               />
                             </div>
                             <div className="suggest-container-detail ml-[10px]">
@@ -306,6 +308,7 @@ function Home({ data, dataPage }: any) {
                                     alt={val?.slug}
                                     fill
                                     className="object-cover"
+                                    unoptimized
                                   />
                                 </div>
                                 <div className="suggest-container-detail ml-[10px]">

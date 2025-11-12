@@ -107,6 +107,7 @@ const Search: FC<any> = ({ data }) => {
                         alt={val?.slug}
                         fill
                         className="object-cover"
+                        unoptimized
                       />
                     </div>
                     <div className="suggest-container-detail ml-[10px]">

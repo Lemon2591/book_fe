@@ -22,7 +22,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         "https://s.lazada.vn/s.6gsi5",
         "https://s.shopee.vn/1BEMtIZKvw",
       ];
-      const rate = 0.15;
+      const rate = 0.05;
 
       if (Math.random() < rate) {
         const percentUrl = Math.random();

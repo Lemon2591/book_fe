@@ -155,6 +155,7 @@ const Post = ({ data }: any) => {
                     alt={data?.slug}
                     fill
                     className="object-cover"
+                    unoptimized
                   />
                 </div>
                 <div className="page-content-des-text">
