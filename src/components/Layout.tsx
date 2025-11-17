@@ -13,11 +13,6 @@ const Layout: FC<any> = ({ children }) => {
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
         />
-        <link rel="shortcut icon" href="/assets/img/static/favicon.png" />
-        <link rel="shortcut icon" href="/assets/img/static/favicon.ico" />
-
-        <link rel="icon" href="/assets/img/static/favicon.png" />
-        <link rel="icon" href="/assets/img/static/favicon.ico" sizes="any" />
         <title>
           Đọc Truyện Online Hay Nhất – Ngôn Tình, Cổ Đại, Hiện Đại, Ngược
         </title>

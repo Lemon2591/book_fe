@@ -19,10 +19,9 @@ class MyDocument extends Document {
     return (
       <Html id="html-main" lang="vi">
         <Head>
-          <link rel="shortcut icon" href="/assets/img/favicon/favicon.png" />
-          <link rel="shortcut icon" href="/assets/img/favicon/favicon.ico" />
-          <link rel="icon" href="/assets/img/favicon/favicon.png" />
-          <link rel="icon" href="/assets/img/favicon/favicon.ico" sizes="any" />
+          <link rel="icon" href="/favicon.ico" />
+          {/* Nếu muốn PNG */}
+          <link rel="icon" href="/favicon.png" type="image/png" />
           {/* Google Tag Manager (noscript) */}
           <noscript>
             <iframe

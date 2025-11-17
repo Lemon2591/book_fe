@@ -274,15 +274,6 @@
     transition: .3s;
 }
 
-.img_post {
-    background-image: url("../../public//assets/img//static/post_slider.jpeg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-color: hsla(0, 0%, 0%, 0.5);
-    background-blend-mode: overlay;
-}
-
 
 .scroll_bar::-webkit-scrollbar {
     display: none;
