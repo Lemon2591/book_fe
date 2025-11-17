@@ -140,7 +140,6 @@ export default function MetaSeo(props: any) {
       aggregateRating: {
         "@type": "AggregateRating",
         ratingValue: "5",
-        ratingCount: "9999",
       },
       hasPart: dataPage?.chapters?.map((val: any, idx: number) => {
         return {
